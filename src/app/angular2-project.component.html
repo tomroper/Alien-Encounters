@@ -1,11 +1,15 @@
-<h1>
-  Mars APP
-</h1>
-
-<a [routerLink]="['/home']">Home</a>
-<a [routerLink]="['/register']">Register</a>
-<a [routerLink]="['/encounters']">Encounters</a>
-<a [routerLink]="['/report']">Report</a>
-<router-outlet>
+  <div id="wrapper"> 
+    <div id="temp_nav">
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/register']">Register</a>
+        <a [routerLink]="['/encounters']">Encounters</a>
+        <a [routerLink]="['/report']">Report</a>
+    </div>
+    
+    <router-outlet>
     <!-- Components Load Here -->
-</router-outlet>
+    </router-outlet>
+    
+    
+  </div> 
+  

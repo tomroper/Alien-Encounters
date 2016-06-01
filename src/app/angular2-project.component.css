@@ -1,0 +1,13 @@
+#wrapper {
+    background: -webkit-linear-gradient(to left, #517fa4 , #243949); 
+    background: linear-gradient(to left, #517fa4 , #243949); 
+    height: 100vh;
+    widows: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
+
+#temp_nav {
+    border: 1px solid #000; 
+}
+

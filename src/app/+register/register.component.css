@@ -1,0 +1,19 @@
+#register_wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register_title{
+    width: 100%;
+    height: 20%;
+    border: 1px solid red;
+}
+
+.register_form {
+    width: 80%;
+    height: 70%;
+    border: 1px solid green;
+}
