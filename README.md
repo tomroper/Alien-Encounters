@@ -1,5 +1,6 @@
 # Alien-Encounters
 ## Angular 2 App that lets you report alien encounters on Mars
+### Currently in Development
 
 ![Mars App Home Screen](http://i.imgur.com/MVgxM7Tl.png)
 
