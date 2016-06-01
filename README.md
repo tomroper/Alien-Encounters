@@ -1,6 +1,9 @@
 # Alien-Encounters
 ## Angular 2 App that lets you report alien encounters on Mars
 
+![Mars App Home Screen](http://i.imgur.com/MVgxM7T.png "Mars App Home Screen")
+
+
 This web app uses Angulars Http service to get and post data to an API.
 It lets a user enter thier information as a Colonist, choose a job, view previous alien encounters and submit a new encounter.
 
