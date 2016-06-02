@@ -14,7 +14,7 @@ export interface IOccupation {
 export class Colonist {
   constructor(
     public name: string,
-    public age: string,
+    public age: number,
     public job_id: string
   ){}
 }
