@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/common';
+
+import { IAlien, Encounter } from '../shared/models';
+import { AlienService, Encounter Service } from '../shared/services'; 
+
+import
+
 
 @Component({
   moduleId: module.id,
