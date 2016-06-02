@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES } from '@angular/router';
+import { NgForm } from '@angular/common';
+
 
 @Component({
   moduleId: module.id,
@@ -15,6 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   
-  _registerButton() {}
+  clicked(event) {
+    this.router.navigate(['/register'])
+  }
 
 }
