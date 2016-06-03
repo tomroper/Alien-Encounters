@@ -38,7 +38,12 @@ export class RegisterComponent implements OnInit {
   onSubmit(event, form){
     
     this.colonistService.createColonist(this.colonist)
-                        .then( colonist => this.router.navigate(['/encounters']))
+                        .then( (colonist) => { 
+                          this.router.navigate(['/encounters']), 
+                          sessionStorage.setItem('sessionColonist', colonist.id )   
+                        });
+                    
+    
     
   }
   

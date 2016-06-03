@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/common';
 
-import { IAlien, Encounter } from '../shared/models';
+import { IAlien, Encounter, Colonist } from '../shared/models';
 import { AlienService, EncounterService } from '../shared/services'; 
 
 
@@ -17,7 +17,7 @@ import { AlienService, EncounterService } from '../shared/services';
 })
 export class ReportComponent implements OnInit {
   
- 
+  public sessioncolonist: string;
   public aliens: IAlien[];
   public report: Encounter;
   public date: string;
@@ -35,10 +35,12 @@ export class ReportComponent implements OnInit {
   
 
   ngOnInit() {
+    
+    this.sessioncolonist = sessionStorage.getItem('sessionColonist');
    
     this.date = Date().slice(0,15);
     
-    this.report = new Encounter(null, this.date, null, "555");
+    this.report = new Encounter(null, this.date, null, this.sessioncolonist);
 
     this.alienService.getAliens().then(( result => this.aliens = result ));
   }
