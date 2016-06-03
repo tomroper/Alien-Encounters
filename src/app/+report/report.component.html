@@ -4,23 +4,41 @@
     <h1>Report any alien Encounters</h1>
     <p>There's something moving and it ain't us</p>
   </div>
-  
-  <div  class="report_title" *ngFor="let alien of aliens">
-    <p>Hello {{ alien.id }}</p>
-  </div>
-  
-  <form class="report_form">
-       <select name="aliens">
-          <option value="alien1">Alien 1</option>
-          <option value="alien2">Alien 2</option>
-          <option value="alien3">Alien 3</option>
-       </select>
-       <textarea placeholder="Description" name="description" form="report_form" class="form_input"></textarea>
+    
+  <form 
+    #reportForm="ngForm" 
+    (ngSubmit)="onSubmit($event, reportForm)" class="report_form">
+    
+      <label for="aliens">Which Alien did you see?</label>
+      
+      
+      
+      
+   
+      <select ngControl="alien" (change)="log(report)" [(ngModel)]="report.atype" class="form-control">
+      
+        <option   [value]="NO_ALIEN_SELECTED"> Select an alien</option> 
+        <option   *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type}} </option>
+              
+      </select>  
+       
+       
+       
+       
+       
+       
+       <label for="description">Description</label>
+       
+       <textarea ngControl="description" 
+       [(ngModel)]="report.action"  placeholder="Description" name="description" form="report_form" class="form_input"></textarea>
+       
+       <button type="submit" class="report_submit">
+          <h1>Submit Alien Sighting</h1>
+        </button>
+       
   </form>
   
-   <div class="report_submit">
-      <h1>Submit Alien Sighting</h1>
-    </div>
+   
   
   
   

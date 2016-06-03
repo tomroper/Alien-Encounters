@@ -20,11 +20,8 @@ export class EncountersComponent implements OnInit {
     private encounterService: EncounterService
   ) {}
 
-  ngOnInit() {
-    console.log('encountersPage');
-    
+  ngOnInit() {    
     this.encounterService.getEncounters().then( ( response => this.encounters = response) );
-    console.log(this.encounters);
   }
   
   clicked(event) {

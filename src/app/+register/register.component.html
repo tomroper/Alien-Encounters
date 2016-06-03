@@ -8,10 +8,11 @@
     <form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)" class="register_form">
       
        <label for="name">Name</label>
+       
        <input ngControl="name" [(ngModel)]="colonist.name" class="form_input" placeholder="NAME" type="text" required> 
      
       
-       <label for="name">Age</label>
+       <label for="age">Age</label>
        <input ngControl="age" [(ngModel)]="colonist.age" class="form_input" placeholder="AGE" type="number" required> 
        
        <label for="occupations">Jobs</label>

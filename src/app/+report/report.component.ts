@@ -17,26 +17,39 @@ import { AlienService, EncounterService } from '../shared/services';
 })
 export class ReportComponent implements OnInit {
   
+ 
   public aliens: IAlien[];
   public report: Encounter;
+  public date: string;
+  public log(report){
+    console.log(report);
+  }
 
   constructor(
     private router: Router,
     private alienService: AlienService,
     private encounterService: EncounterService
-  ) {}
+  ) {
+  }
+
+  
 
   ngOnInit() {
-    this.report = new Encounter("","","","");
-    this.alienService.getAliens().then(( result => this.aliens = result ))
+   
+    this.date = Date().slice(0,15);
+    
+    this.report = new Encounter(null, this.date, null, "555");
 
+    this.alienService.getAliens().then(( result => this.aliens = result ));
   }
 
   onSubmit(event, form){
-    
+      
     this.encounterService.postEncounters(this.report)
                           .then( report => this.router.navigate(['/encounters']))
     
   }
+   
+  
 
 }
