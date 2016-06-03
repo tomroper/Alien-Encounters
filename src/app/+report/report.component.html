@@ -5,6 +5,10 @@
     <p>There's something moving and it ain't us</p>
   </div>
   
+  <div  class="report_title" *ngFor="let alien of aliens">
+    <p>Hello {{ alien.id }}</p>
+  </div>
+  
   <form class="report_form">
        <select name="aliens">
           <option value="alien1">Alien 1</option>

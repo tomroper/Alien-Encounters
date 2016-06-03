@@ -3,22 +3,32 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/common';
 
 import { IAlien, Encounter } from '../shared/models';
-import { AlienService, Encounter Service } from '../shared/services'; 
+import { AlienService, EncounterService } from '../shared/services'; 
 
-import
+
 
 
 @Component({
   moduleId: module.id,
   selector: 'app-report',
   templateUrl: 'report.component.html',
-  styleUrls: ['report.component.css']
+  styleUrls: ['report.component.css'],
+  providers:[AlienService, EncounterService]
 })
 export class ReportComponent implements OnInit {
+  
+  public aliens: IAlien[];
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private alienService: AlienService,
+    private encounterService: EncounterService
+  ) {}
 
   ngOnInit() {
+    
+    this.alienService.getAliens().then(( result => this.aliens = result ))
+    
   }
 
 }

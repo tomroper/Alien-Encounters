@@ -3,6 +3,7 @@ import { NgForm } from '@angular/common';
 import { Router } from '@angular/router';
 
 import { Colonist, IOccupation } from '../shared/models';
+
 import { ColonistService, OccupationService } from '../shared/services';
 
 @Component({
