@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   }
   
   clicked(event) {
+    event.preventDefault();
     this.router.navigate(['/register'])
   }
 
