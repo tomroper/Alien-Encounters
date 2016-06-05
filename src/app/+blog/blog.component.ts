@@ -21,7 +21,19 @@ export class BlogComponent implements OnInit {
  ) {}
 
  ngOnInit() : void {
-   this.blogService.getBlog().then( result => this.blogs = result);
+   this.blogService.getBlog().then( (result) => {
+     
+     this.blogs = result 
+     
+     
+     
+      });
+   
+ 
+   
+  
+   
+   
  }
  
 }
