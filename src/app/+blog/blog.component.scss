@@ -1,0 +1,44 @@
+#blog_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.blog_title{
+    height: 7%;
+    h1 {
+    color: #fff;
+    font-family: 'Avenir';
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 2rem;
+    text-align: center;
+    }
+    margin-bottom: 10px;
+}
+
+.blog_content {
+    height: 60%;
+    width: 60%;
+    min-width: 300px;
+}
+
+.blog_post {
+    margin-bottom: 25px;
+   
+ 
+}
+
+.story_title {
+    color: #fff;
+    font-family: 'Avenir';
+}
+
+.story_body {
+    color: #fff;
+    font-family: 'Avenir';
+    margin-top: 7px;
+    font-size: 0.8rem;
+}
