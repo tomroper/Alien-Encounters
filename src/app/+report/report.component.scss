@@ -76,3 +76,7 @@
     min-width: 300px;
     margin-bottom: 20px;
 }
+
+.report_submit:disabled{
+    opacity: 0.3;
+}

@@ -79,3 +79,7 @@
     min-width: 300px;
     margin-bottom: 20px;
 }
+
+.register_submit:disabled {
+        opacity: 0.3;
+    }

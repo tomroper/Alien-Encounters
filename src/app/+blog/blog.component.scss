@@ -27,8 +27,6 @@
 
 .blog_post {
     margin-bottom: 25px;
-   
- 
 }
 
 .story_title {
@@ -41,4 +39,20 @@
     font-family: 'Avenir';
     margin-top: 7px;
     font-size: 0.8rem;
+}
+
+.blog_button{
+    height: 10%;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Avenir';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }

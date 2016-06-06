@@ -21,6 +21,7 @@ export class ReportComponent implements OnInit {
   public aliens: IAlien[];
   public report: Encounter;
   public date: string;
+  public NO_ALIEN_SELECTED: string;
   public log(report){
     console.log(report);
   }
@@ -30,6 +31,7 @@ export class ReportComponent implements OnInit {
     private alienService: AlienService,
     private encounterService: EncounterService
   ) {
+     this.NO_ALIEN_SELECTED = "(none)";
   }
 
   
@@ -40,7 +42,7 @@ export class ReportComponent implements OnInit {
    
     this.date = Date().slice(0,15);
     
-    this.report = new Encounter(null, this.date, null, this.sessioncolonist);
+    this.report = new Encounter(this.NO_ALIEN_SELECTED, this.date, null, this.sessioncolonist);
 
     this.alienService.getAliens().then(( result => this.aliens = result ));
   }
@@ -52,6 +54,9 @@ export class ReportComponent implements OnInit {
     
   }
    
+   get noAlien() : boolean {
+    return this.report.atype === this.NO_ALIEN_SELECTED;
+  }
   
 
 }
