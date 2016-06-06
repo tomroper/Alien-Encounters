@@ -27,5 +27,9 @@ export class EncountersComponent implements OnInit {
   clicked(event) {
     this.router.navigate(['/report']);
   }
+  
+  blogClicked(event) {
+    this.router.navigate(['/blog']);
+  }
 
 }
