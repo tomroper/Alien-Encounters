@@ -15,7 +15,7 @@ This project uses:
 4. GET & POST requests using the Angular Http service
 5. HTML5 / CSS3
  
-#### Known bug in deployed app where blog posts arn't fetched from wordpress API
+Known bug in deployed app where blog posts arn't fetched from wordpress API. Working on localhost, but when deployed to firebase an issue with the API means no secure connection can be made. 
 
 
 
