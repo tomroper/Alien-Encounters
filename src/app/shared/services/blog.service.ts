@@ -7,7 +7,7 @@ import { IBlog } from '../models';
 @Injectable()
 export class BlogService {
 
- blogUrl = 'http://fourth.academy.red/wp-json/wp/v2/posts';
+ blogUrl = '//fourth.academy.red/wp-json/wp/v2/posts';
 
  constructor(private http: Http) {}
 

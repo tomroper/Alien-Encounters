@@ -1,26 +1,22 @@
 <div id="blog_container">
- 
+
   <div class="blog_title">
    <h1>News from other worlds..</h1>
   </div>
-  
+
   <div class="blog_content">
     <div class="blog_post" *ngFor="let blog of blogs">
-    
       <h1 class="story_title" >
         {{ blog.title.rendered }}
       </h1>
-      
-      <p class="story_body"> 
-        {{ blog.excerpt.rendered }} 
+      <p class="story_body">
+        {{ blog.excerpt.rendered }}
       </p>
-    
-    </div>
-    
+  </div>
+
   <button (click)="clicked()" class="blog_button">
     <h1>Back to encounters</h1>
   </button>
   </div>
-
 
 </div>

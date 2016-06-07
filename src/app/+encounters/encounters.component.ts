@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
-
 import { Encounter } from '../shared/models';
 import { EncounterService } from '../shared/services';
 
@@ -12,7 +11,7 @@ import { EncounterService } from '../shared/services';
   providers: [EncounterService]
 })
 export class EncountersComponent implements OnInit {
-  
+
   public encounters: Encounter[];
 
   constructor(
@@ -20,14 +19,14 @@ export class EncountersComponent implements OnInit {
     private encounterService: EncounterService
   ) {}
 
-  ngOnInit() {    
+  ngOnInit() {
     this.encounterService.getEncounters().then( ( response => this.encounters = response) );
   }
-  
+
   clicked(event) {
     this.router.navigate(['/report']);
   }
-  
+
   blogClicked(event) {
     this.router.navigate(['/blog']);
   }

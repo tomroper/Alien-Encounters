@@ -3,12 +3,9 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/common';
 
 import { IAlien, Encounter, Colonist } from '../shared/models';
-import { AlienService, EncounterService } from '../shared/services'; 
+import { AlienService, EncounterService } from '../shared/services';
 
-
-
-
-@Component({    
+@Component({
   moduleId: module.id,
   selector: 'app-report',
   templateUrl: 'report.component.html',
@@ -16,7 +13,7 @@ import { AlienService, EncounterService } from '../shared/services';
   providers:[AlienService, EncounterService]
 })
 export class ReportComponent implements OnInit {
-  
+
   public sessioncolonist: string;
   public aliens: IAlien[];
   public report: Encounter;
@@ -34,29 +31,27 @@ export class ReportComponent implements OnInit {
      this.NO_ALIEN_SELECTED = "(none)";
   }
 
-  
-
   ngOnInit() {
-    
+
     this.sessioncolonist = sessionStorage.getItem('sessionColonist');
-   
+
     this.date = Date().slice(0,15);
-    
+
     this.report = new Encounter(this.NO_ALIEN_SELECTED, this.date, null, this.sessioncolonist);
 
     this.alienService.getAliens().then(( result => this.aliens = result ));
   }
 
   onSubmit(event, form){
-      
+
     this.encounterService.postEncounters(this.report)
                           .then( report => this.router.navigate(['/encounters']))
-    
+
   }
-   
+
    get noAlien() : boolean {
     return this.report.atype === this.NO_ALIEN_SELECTED;
   }
-  
+
 
 }

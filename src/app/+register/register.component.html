@@ -1,23 +1,22 @@
 <div id="register_container">
-  
+
     <div class="register_title">
       <h1>Colonist Registration</h1>
     </div>
-    
+
     <form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)" class="register_form">
-       <label for="name">Name</label>     
-       <input ngControl="name" [(ngModel)]="colonist.name" class="form_input" placeholder="NAME" type="text" required> 
+       <label for="name">Name</label>
+       <input ngControl="name" [(ngModel)]="colonist.name" class="form_input" placeholder="NAME" type="text" required>
        <label for="age">Age</label>
        <input ngControl="age" [(ngModel)]="colonist.age" class="form_input" placeholder="AGE" type="number" required>
        <label for="occupations">Jobs</label>
        <select ngControl="job" (change)="log(colonist)" [(ngModel)]="colonist.job_id" class="form-control">
           <option [value]="NO_OCCUPATION_SELECTED">Select a job</option>
           <option *ngFor="let job of occupations" [value]="job.id" >{{ job.name }}</option>
-       </select>       
-     
-     
-       <button type="submit" class="register_submit" [disabled]="noOccupation || !registerForm.form.valid"> <h1>Submit</h1></button>
-   
-    </form>
-    
+       </select>
+       <button type="submit" class="register_submit" [disabled]="noOccupation || !registerForm.form.valid">
+         <h1>Submit</h1>
+       </button>
+      </form>
+
 </div>

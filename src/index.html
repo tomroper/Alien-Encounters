@@ -21,8 +21,6 @@
     </div>
   </angular2-project-app>
 
-  
-
     {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
     <script>
       System.import('system-config.js').then(function () {
@@ -30,9 +28,17 @@
       }).catch(console.error.bind(console));
     </script>
 
-  
-
-
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAWUOWnwbd9Dy3snV32Za5WRdpi-wUb3Dc",
+        authDomain: "alien-encounters.firebaseapp.com",
+        databaseURL: "https://alien-encounters.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
 
 </body>
 </html>

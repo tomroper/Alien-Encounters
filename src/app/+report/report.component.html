@@ -1,27 +1,25 @@
 <div id="report_container">
-  
+
   <div class="report_title">
     <h1>Report any alien Encounters</h1>
     <p>There's something moving and it ain't us</p>
   </div>
-    
-  <form 
-    #reportForm="ngForm" 
+
+  <form
+    #reportForm="ngForm"
     (ngSubmit)="onSubmit($event, reportForm)" class="report_form">
-    
-        <label for="aliens">Which Alien did you see?</label> 
+        <label for="aliens">Which Alien did you see?</label>
         <select ngControl="alien" (change)="log(report)" [(ngModel)]="report.atype" class="form-control">
-          <option   [value]="NO_ALIEN_SELECTED"> Select an alien</option> 
-          <option   *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type}} </option>       
-        </select>  
-       <label for="description">Description</label> 
-       <textarea ngControl="description" 
-       [(ngModel)]="report.action"  placeholder="Description" name="description" form="report_form" class="form_input"></textarea> 
-       <button type="submit" class="report_submit" 
-       [disabled]="noAlien || !reportForm.form.valid">
+          <option   [value]="NO_ALIEN_SELECTED"> Select an alien</option>
+          <option   *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type}} </option>
+        </select>
+        <label for="description">Description</label>
+        <textarea ngControl="description"
+        [(ngModel)]="report.action"  placeholder="Description" name="description" form="report_form" class="form_input"></textarea>
+        <button type="submit" class="report_submit"
+        [disabled]="noAlien || !reportForm.form.valid">
           <h1>Submit Alien Sighting</h1>
-        </button>
-       
+        </button>   
   </form>
-  
+
 </div>
