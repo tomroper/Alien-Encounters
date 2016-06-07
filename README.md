@@ -1,6 +1,5 @@
 # Alien-Encounters
 ## Angular 2 App that lets you report alien encounters on Mars
-### Currently in Development
 
 ![Mars App Home Screen](http://i.imgur.com/MVgxM7Tl.png)
 
@@ -15,6 +14,10 @@ This project uses:
 3. ES2015 written in TypeScript
 4. GET & POST requests using the Angular Http service
 5. HTML5 / CSS3
+ 
+Known bug in deployed app where blog posts arn't fetched from wordpress API. Working on localhost, but when deployed to firebase an issue with the API means no secure connection can be made. 
+
+![Mars App Report Screen](http://i.imgur.com/kAwumYJm.png)
 
 
 
