@@ -38,6 +38,20 @@
          display: none;
      }
 
+     select{
+        background: rgba(0,0,0,0.5);
+        width: 80%;
+        height: 20%;
+         border-radius: 10px;
+        outline: none;
+        box-shadow: none;
+        border-style: none;
+        color: #fff;
+        font-family: 'Avenir';
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
     .form_input {
         width: 80%;
         height: 60%;
